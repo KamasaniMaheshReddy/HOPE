@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hope — Travel with Heart</title>
+<meta name="description" content="Hope: personalized tourism & hospitality experiences — curated stays, guided tours, and unforgettable local moments."/>
+<style>
+  :root{--accent:#1e90ff;--bg:#f7fbff;--card:#ffffff;--muted:#666;}
+  *{box-sizing:border-box}
+  body{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;margin:0;background:linear-gradient(180deg,#f7fbff 0%, #ffffff 100%);color:#0b2545}
+  header{padding:28px 20px;display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto}
+  .logo{display:flex;gap:12px;align-items:center;font-weight:700}
+  .logo .mark{width:48px;height:48px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:800}
+  .hero{max-width:1100px;margin:20px auto;padding:28px;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+  .hero h1{font-size:32px;margin:0 0 12px}
+  .hero p{margin:0 0 18px;color:var(--muted)}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:12px 18px;border-radius:10px;text-decoration:none;display:inline-block;font-weight:600}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-ghost{border:1px solid rgba(11,37,69,0.08);background:transparent;color:#0b2545}
+  .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(11,37,69,0.06)}
+  .features{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+  .feature{flex:1;min-width:160px}
+  .socials{display:flex;gap:8px;align-items:center;margin-top:12px}
+  footer{max-width:1100px;margin:40px auto 80px;padding:0 20px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap}
+  .hero-right{background:linear-gradient(180deg,#fff,#f4fbff);padding:18px;border-radius:12px}
+  .list{margin:8px 0 0;padding:0 0 0 18px}
+  .contact-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+  @media(max-width:900px){.hero{grid-template-columns:1fr;}.hero-right{order:-1}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <div class="mark">H</div>
+    <div>
+      <div style="font-size:16px">Hope</div>
+      <div style="font-size:12px;color:var(--muted)">Travel with Heart</div>
+    </div>
+  </div>
+  <nav style="display:flex;gap:12px;align-items:center">
+    <a class="btn btn-ghost" href="#services">Services</a>
+    <a class="btn btn-ghost" href="#plans">Plans</a>
+    <a class="btn btn-primary" href="#book">Book Now</a>
+  </nav>
+</header>
+
+<section class="hero" role="main">
+  <div>
+    <h1>Discover curated travel experiences with Hope</h1>
+    <p>Personalized itineraries, trusted stays, and authentic local experiences crafted for comfort, culture, and adventure. Book stress-free journeys made just for you.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#book">Start Your Journey</a>
+      <a class="btn btn-ghost" href="#contact">Contact Us</a>
+    </div>
+
+    <div class="features">
+      <div class="feature card">
+        <strong>Personalized Itineraries</strong>
+        <div style="color:var(--muted);font-size:13px;margin-top:6px">Tailor-made trips for families, couples, and solo travelers.</div>
+      </div>
+      <div class="feature card">
+        <strong>Local Experts</strong>
+        <div style="color:var(--muted);font-size:13px;margin-top:6px">Guides and partners who know the place like a friend.</div>
+      </div>
+      <div class="feature card">
+        <strong>Trusted Hospitality</strong>
+        <div style="color:var(--muted);font-size:13px;margin-top:6px">Handpicked hotels & experiences for safety and comfort.</div>
+      </div>
+    </div>
+
+    <section id="services" style="margin-top:18px">
+      <h3 style="margin:8px 0">Services</h3>
+      <ul class="list">
+        <li>Custom trip planning & booking</li>
+        <li>Guided local tours & experiences</li>
+        <li>Accommodation coordination</li>
+        <li>Airport transfers & mobility support</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <aside class="hero-right card" aria-label="Booking panel">
+    <h3 style="margin-top:0">Ready to travel?</h3>
+    <p style="margin:6px 0;color:var(--muted)">Get a free trip plan — enter details and we'll reply within 24 hours.</p>
+    <form id="leadForm" action="#" onsubmit="event.preventDefault();alert('Thanks! We received your request (demo).');">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <input type="text" name="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
+        <input type="tel" name="phone" placeholder="Phone" style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
+        <input type="email" name="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
+        <select name="tripType" style="padding:10px;border-radius:8px;border:1px solid #e6eef8">
+          <option>Family</option><option>Couple</option><option>Solo</option><option>Adventure</option><option>Luxury</option>
+        </select>
+        <textarea name="notes" rows="3" placeholder="Tell us what you want" style="padding:10px;border-radius:8px;border:1px solid #e6eef8"></textarea>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-primary" type="submit">Request Plan</button>
+          <a class="btn btn-ghost" href="mailto:hello@hope.travel">Email Us</a>
+        </div>
+      </div>
+    </form>
+
+    <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+      <strong>Popular packages</strong>
+      <ul class="list">
+        <li>Weekend Nature Retreat</li>
+        <li>City Culture & Food Tour</li>
+        <li>Coastal Adventure</li>
+      </ul>
+    </div>
+
+    <div style="margin-top:12px">
+      <strong>Follow Hope</strong>
+      <div class="socials">
+        <a href="#" aria-label="instagram">Instagram: @hope.travel</a>
+        <a href="#" aria-label="facebook">Facebook: HopeTravel</a>
+        <a href="#" aria-label="youtube">YouTube: Hope Travel</a>
+      </div>
+    </div>
+
+  </aside>
+</section>
+
+<section id="plans" style="max-width:1100px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+  <div class="card">
+    <h4>Starter — Local</h4>
+    <p style="color:var(--muted)">Short trips and day tours. Perfect for explorers nearby.</p>
+    <ul class="list">
+      <li>Itinerary planning</li><li>Local guide</li><li>Support</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>Explorer — Domestic</h4>
+    <p style="color:var(--muted)">3–7 day trips with handpicked stays.</p>
+  </div>
+  <div class="card">
+    <h4>Signature — Premium</h4>
+    <p style="color:var(--muted)">Custom multi-day experiences for families and couples.</p>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <strong>Hope</strong>
+    <div style="margin-top:6px;color:var(--muted)">Email: hello@hope.travel · Phone: +91 90000 00000</div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-size:12px;color:var(--muted)">© Hope · Travel with Heart</div>
+    <div style="font-size:12px;color:var(--muted);margin-top:6px">Follow: @hope.travel</div>
+  </div>
+</footer>
+
+</body>
+</html>
